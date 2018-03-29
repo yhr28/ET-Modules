@@ -81,7 +81,7 @@ ui.CloseLayer();
 ## 关闭所有UI.(每个Ui都可以关闭所有内存中的UI.)
 
 ```
-ui。CloseAll();
+ui.CloseAll();
 ```
 
 
