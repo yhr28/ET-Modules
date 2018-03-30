@@ -48,8 +48,9 @@ namespace ETModel
 
             //加载UI包
 #if UNITY_EDITOR
-            UIPackage.AddPackage("UI/ASource");
+          //  UIPackage.AddPackage("UI/ASource");
 #else
+
             //ResourcesComponent resourcesComponent = Game.Scene.GetComponent<ResourcesComponent>();
             //resourcesComponent.LoadOneBundle($"ui");
             //ABInfo abInfo = resourcesComponent.GetABInfoByName("ui");
@@ -57,13 +58,13 @@ namespace ETModel
 #endif
             //UI的配置
             //Groot的参数初始化
-            GRoot.inst.SetContentScaleFactor(1136, 640, ScreenMatchMode.MatchWidthOrHeight);
-            Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("uiaudio.unity3d");
+            //GRoot.inst.SetContentScaleFactor(1136, 640, ScreenMatchMode.MatchWidthOrHeight);
+           // Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("uiaudio.unity3d");
 
-            UIConfig.buttonSound = (AudioClip)UIPackage.GetItemAssetByURL("ui://ASource/buttonclick");
+           //UIConfig.buttonSound = (AudioClip)UIPackage.GetItemAssetByURL("ui://ASource/buttonclick");
             //GameObject bunddleObject = (GameObject)Game.Scene.GetComponent<ResourcesComponent>().GetAsset("uiaudio.unity3d", "UIAudio");
             //UIConfig.buttonSound =bunddleObject.Get<AudioClip>("ButtonClickAudio");
-            UIConfig.modalLayerColor = new Color(186f, 85f, 211f, 0.4f);
+            //UIConfig.modalLayerColor = new Color(186f, 85f, 211f, 0.4f);
 
         }
         /// <summary>
