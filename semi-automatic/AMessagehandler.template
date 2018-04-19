@@ -1,0 +1,21 @@
+/**
+*
+*
+*
+* **/
+
+using System.Threading.Tasks;
+using ETModel;
+
+namespace ETHotfix
+{
+	[MessageHandler(AppType.XX)]
+	public class [HandlerName] : AMHandler<[ProtoReuestName]>
+	{
+		protected override async void Run([ProtoReuestName] message)
+		{
+			 await Task.CompletedTask;
+		}
+		
+	}//class_end
+}
