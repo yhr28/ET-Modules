@@ -125,7 +125,7 @@ namespace ILRuntime.Runtime.Enviorment
             {
                 return dele;
             });
-            //**********FraiGUI
+            //**********FraiGUI*************************************************************************************************************************************************************
             dMgr.RegisterDelegateConvertor<FairyGUI.EventCallback0>((act) =>
              {
                  return new FairyGUI.EventCallback0(() =>
@@ -168,7 +168,7 @@ namespace ILRuntime.Runtime.Enviorment
             });
 
 
-
+//**********FraiGUI*************************************************************************************************************************************************************
             RegisterCrossBindingAdaptor(new Adaptors.AttributeAdaptor());
 
             debugService = new Debugger.DebugService(this);
