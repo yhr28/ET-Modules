@@ -16,10 +16,10 @@ namespace ETHotfix
 				ETModel.Game.Hotfix.LateUpdate = () => { LateUpdate(); };
 				ETModel.Game.Hotfix.OnApplicationQuit = () => { OnApplicationQuit(); };
 				
-				//Game.Scene.AddComponent<UIComponent>();
+			
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatherComponent>();
-                Game.Scene.AddComponent<FairyGUIComponent>();
+                Game.Scene.AddComponent<UIManagerComponent>();
 
 				// 加载热更配置
 				ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("config.unity3d");
