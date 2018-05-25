@@ -114,9 +114,28 @@ namespace ETModel
                     return;
                 }
 
-                HttpListenerContext context = await this.listener.GetContextAsync();
-                await _middlewareEntry.Invoke(context); // 调用中间件
+                try
+                {
+                    HttpListenerContext context = await this.listener.GetContextAsync();
+                    InvokeAsync(context);       //异步处理请求
+                }
+                catch (Exception e)
+                {
+                    Log.Error($"http server accept error : {e}");
+                }
+            }
+        }
+
+        public async void InvokeAsync(HttpListenerContext context)
+        {
+            try
+            {
+                await _middlewareEntry.Invoke(context);     // 调用中间件
                 context.Response.Close();
+            }
+            catch (Exception e)
+            {
+                Log.Error($"http server handler error : {e}");
             }
         }
 
