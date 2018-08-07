@@ -22,9 +22,11 @@ SharpNav下载地址:https://github.com/Robmaister/SharpNav
 就是SharpNav在服务端生成的地图具体所在的位置值。请记住这个值，下一步要用！！！！！如本人得到的值Vector3(-100,-7,7)
 
 6.将地图的Vector3的值填入example工程里的，
+
              * GeneratePathfinding的
              * SVector3 c = new SVector3(-100, -7, 7);
              * SVector3 e = new SVector3(5, 5, 5); 
+             
              *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+* 
              * 及 GenerateCrowd() 里的 
              * SVector3 c = new SVector3(-100, -7, 7);
